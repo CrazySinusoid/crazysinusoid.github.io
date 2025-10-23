@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ročníkový projekt – Anton Shevchuk</title>
+  <style>
+    :root { --c1:#0b3d91; --c2:#1f6feb; --bg:#fafafa; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222;max-width:900px;margin:40px auto;padding:24px;line-height:1.6}
+    .title{border-bottom:3px solid var(--c1);padding-bottom:12px;margin-bottom:24px}
+    h1{margin:0;color:var(--c1)}
+    h2{color:var(--c1);margin-top:28px}
+    .grid{display:grid;grid-template-columns:220px 1fr;gap:10px 18px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;margin-top:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    a{color:var(--c2);text-decoration:none} a:hover{text-decoration:underline}
+    ul{margin:8px 0 0 20px}
+    .muted{color:#555}
+    .footer{margin-top:36px;font-size:14px;color:#666}
+  </style>
+</head>
+<body>
+  <div class="title">
+    <h1>Ročníkový projekt</h1>
+    <div class="muted">FMFI UK – akademický rok 2025/26</div>
+  </div>
+
+  <div class="card">
+    <div class="grid">
+      <div><b>Meno študenta:</b></div><div>Anton Shevchuk</div>
+      <div><b>Email:</b></div><div>anton.shevchuk@uniba.sk</div>
+      <div><b>Vedúci projektu:</b></div><div>doc. Jaroslav Janáček, PhD.</div>
+      <div><b>Email vedúceho:</b></div><div>jaroslav.janacek@fmph.uniba.sk</div>
+      <div><b>Názov projektu:</b></div>
+      <div><b>Vývoj vlastného VPN protokolu a virtuálneho sieťového rozhrania</b></div>
+      <div><b>Git repozitár:</b></div>
+      <div><a href="https://github.com/CrazySinusoid/VPN-projekt" target="_blank" rel="noopener">github.com/CrazySinusoid/VPN-projekt</a></div>
+      <div><b>Stránka projektu:</b></div>
+      <div><a href="/VPN-projekt/" target="_blank" rel="noopener">crazysinusoid.github.io/VPN-projekt/</a></div>
+    </div>
+  </div>
+
+  <h2>Cieľ projektu</h2>
+  <p>
+    Cieľom je navrhnúť a implementovať vlastný VPN protokol a sprievodné komponenty,
+    ktoré umožnia vytvoriť zabezpečené spojenie medzi klientom a serverom, vykonať autentifikáciu strán,
+    dohodu kľúčov a zabezpečený prenos sieťových paketov.
+  </p>
+
+  <h2>Popis</h2>
+  <p>
+    Systém bude pozostávať z klienta a servera, ktoré nadviažu šifrovaný kanál, overia totožnosť,
+    vykonajú výmenu kľúčov a budú prenášať IP pakety cez virtuálny tunel. Na prácu s paketmi bude
+    použité virtuálne sieťové zariadenie simulujúce štandardné rozhranie.
+  </p>
+
+  <h2>Hlavné úlohy</h2>
+  <ul>
+    <li>návrh koncepcie a štruktúry VPN protokolu;</li>
+    <li>mechanizmus vytvárania a udržiavania zabezpečeného spojenia (klient → server);</li>
+    <li>virtuálne sieťové rozhranie na spracovanie a smerovanie IP paketov;</li>
+    <li>základná autentifikácia a výmena kľúčov;</li>
+    <li>opätovné pripojenie pri strate spojenia a odolnosť voči chybám;</li>
+    <li>testy na prenose reálnych paketov.</li>
+  </ul>
+
+  <h2>Očakávané výsledky</h2>
+  <ul>
+    <li>funkčné VPN riešenie so šifrovaným kanálom;</li>
+    <li>implementované bezpečnostné mechanizmy a kontrola integrity dát;</li>
+    <li>funkčné virtuálne rozhranie a správne smerovanie paketov;</li>
+    <li>demonštrácia výmeny dát;</li>
+    <li>zdokumentovaná architektúra a princípy fungovania.</li>
+  </ul>
+
+  <h2>Reporty</h2>
+  <p>(bude dopĺňané počas semestra; môžeš ukladať do <code>/reports/</code> a лінковать ниже)</p>
+
+  <div class="footer">
+    Posledná aktualizácia: <span id="dt"></span>
+  </div>
+  <script>document.getElementById('dt').textContent = new Date().toLocaleDateString('sk-SK');</script>
+</body>
+</html>
